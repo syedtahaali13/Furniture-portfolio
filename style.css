@@ -2068,7 +2068,7 @@ header {
     .app-container {
         position: relative;
         width: 92vw;
-        min-height: 115vw;
+        min-height: 130vw;
         overflow: hidden;
         display: flex;
         flex-direction: column;
