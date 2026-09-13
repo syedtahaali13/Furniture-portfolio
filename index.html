@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Future of Living</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="sparkle-canvas-hero"></canvas>
+    <div class="app-container">
+        <div class="hero-bg-layer"></div>
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-content-overlay">
+            <header>
+                <div class="logo">Studio</div>
+                <nav class="nav-links">
+                    <a href="#">Products</a>
+                    <a href="#">Offers</a>
+                    <a href="#">Sales</a>
+                    <a href="#">Essentials</a>
+                </nav>
+                <div class="nav-actions">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <i class="fas fa-shopping-cart" id="cart-icon"></i>
+                    <div class="account-btn">
+                        <div class="account-circle"></div>
+                        <span>Account</span>
+                    </div>
+                    <i class="fas fa-bars mobile-menu-btn" id="mobile-menu-btn"></i>
+                </div>
+            </header>
+            <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+                <button class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
+                <nav class="mobile-nav-links">
+                    <a href="#">Products</a>
+                    <a href="#">Offers</a>
+                    <a href="#">Sales</a>
+                    <a href="#">Essentials</a>
+                </nav>
+            </div>
+            <div class="hero-tagline">
+                <h1 class="desktop-tagline">Discover<br>Statement Pieces<br>Engineered For The<br>Future Of Living</h1>
+                <h1 class="mobile-tagline">Shape Your Space.</h1>
+            </div>
+            <div class="left-content">
+                <div class="video-card" id="video-card">
+                    <div class="video-thumb">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <span>Play<br>Now</span>
+                </div>
+                <div class="product-details">
+                    <h2>Sofas &amp; Pillow</h2>
+                    <div class="price">$79</div>
+                    <p>Checkout the best arrangement for your Apartment</p>
+                </div>
+            </div>
+            <div class="bottom-controls">
+                <div class="pill-slider">
+                    <div class="pill-content">
+                        <div class="pill-thumb"></div>
+                        <div class="pill-text">
+                            <span class="next-label">Next Up</span>
+                            <span class="next-title">Sofas &amp; Pillow</span>
+                        </div>
+                    </div>
+                    <button class="arrow-btn" id="arrow-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="circle-thumb thumb-1" id="thumb-1"></div>
+                <div class="circle-thumb thumb-2" id="thumb-2"></div>
+            </div>
+        </div>
+        <div class="main-chair" id="main-chair"></div>
+        <div class="chair-glow"></div>
+        <div class="new-arrivals-badge">
+            <svg viewBox="0 0 100 100" class="badge-text-svg">
+                <path id="circlePath" fill="none" d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" />
+                <text fill="var(--gold-accent)" font-size="10.5" font-weight="700" letter-spacing="1.5"
+                    font-family="'Plus Jakarta Sans', sans-serif">
+                    <textPath href="#circlePath" startOffset="0%">
+                        NEW ARRIVALS • NEW ARRIVALS •
+                    </textPath>
+                </text>
+            </svg>
+            <div class="badge-inner-circle">
+                <i class="fas fa-gem"></i>
+            </div>
+        </div>
+    </div>
+    <section class="products-section" id="products-section">
+        <canvas id="sparkle-canvas"></canvas>
+        <h2 class="section-heading">PRODUCTS</h2>
+        <div class="products-carousel" id="products-carousel">
+            <div class="product-card card-small tilt-left-far" data-index="0">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&w=400&q=80"
+                        alt="The Midnight Chair">
+                </div>
+                <div class="card-info">
+                    <span class="card-name">THE MIDNIGHT CHAIR</span>
+                    <span class="card-price">$0149</span>
+                </div>
+            </div>
+            <div class="product-card card-medium tilt-left" data-index="1">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?auto=format&fit=crop&w=400&q=80"
+                        alt="The Elegance Chair">
+                </div>
+                <div class="card-info">
+                    <span class="card-name">THE ELEGANCE CHAIR</span>
+                    <span class="card-price">$0189</span>
+                </div>
+            </div>
+            <div class="product-card card-large active-card" data-index="2">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=500&q=80"
+                        alt="The Classic Chair">
+                </div>
+                <div class="card-info">
+                    <span class="card-name">THE CLASSIC CHAIR</span>
+                    <span class="card-price">$0195</span>
+                    <div class="card-colors">
+                        <span class="color-dot dot-light active-dot"></span>
+                        <span class="color-dot dot-dark"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card card-medium tilt-right" data-index="3">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80"
+                        alt="The Modern Chair">
+                </div>
+                <div class="card-info">
+                    <span class="card-name">THE MODERN CHAIR</span>
+                    <span class="card-price">$0129</span>
+                </div>
+            </div>
+            <div class="product-card card-small tilt-right-far" data-index="4">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1519947486511-46149fa0a254?auto=format&fit=crop&w=400&q=80"
+                        alt="The Walnut Chair">
+                </div>
+                <div class="card-info">
+                    <span class="card-name">THE WALNUT CHAIR</span>
+                    <span class="card-price">$0219</span>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="swipe-btn swipe-left" id="swipe-left">
+                <i class="fas fa-chevron-left"></i>
+                <span>Previous</span>
+            </button>
+            <div class="carousel-dots" id="carousel-dots">
+                <span class="c-dot active-c-dot"></span>
+                <span class="c-dot"></span>
+                <span class="c-dot"></span>
+            </div>
+            <button class="swipe-btn swipe-right" id="swipe-right">
+                <span>Next</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="view-all-wrapper">
+            <button class="view-all-btn" id="view-all-products">
+                View All Products <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+    <section class="flash-sale-section" id="flash-sale-section">
+        <canvas id="sparkle-canvas-2"></canvas>
+        <div class="flash-sale-outer">
+            <div class="flash-sale-left">
+                <div class="deco-dots top-right">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="deco-dots bottom-left">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <h2 class="flash-title">Flash <span class="green-accent">Sale!</span></h2>
+                <p class="flash-subtitle">Get 25% off - Limited Time Offer!</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="cd-days">04</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <span class="countdown-colon">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="cd-hours">14</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <span class="countdown-colon">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="cd-minutes">48</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <span class="countdown-colon">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="cd-seconds">18</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <button class="shop-now-btn" id="shop-now-btn">
+                    Shop Now <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="flash-sale-right">
+                <div class="flash-img flash-img-1">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80"
+                        alt="Modern Kitchen Interior">
+                </div>
+                <div class="flash-img flash-img-2">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80"
+                        alt="Cozy Living Room">
+                </div>
+            </div>
+        </div>
+        <div class="view-all-wrapper">
+            <button class="view-all-btn view-offers-btn" id="view-offers">
+                View Offers <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+    <section class="about-section" id="about-section">
+        <canvas id="sparkle-canvas-3"></canvas>
+        <div class="benefits-container">
+            <h2 class="section-heading">Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="icon-wrap"><i class="fas fa-leaf"></i></div>
+                    <span class="benefit-text">Timeless Designs</span>
+                </div>
+                <div class="benefit-divider"></div>
+                <div class="benefit-item">
+                    <div class="icon-wrap"><i class="fas fa-gem"></i></div>
+                    <span class="benefit-text">Quality craftsmanship</span>
+                </div>
+                <div class="benefit-divider"></div>
+                <div class="benefit-item">
+                    <div class="icon-wrap"><i class="fas fa-recycle"></i></div>
+                    <span class="benefit-text">Eco-friendly solutions</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-container">
+            <h2 class="section-heading about-heading">About Studio</h2>
+            <p class="about-desc">
+                At Studio, we believe in creating furniture that transforms houses into homes. With a commitment to
+                quality and style, our pieces bring your vision to life.
+            </p>
+            <button class="learn-more-btn">
+                Learn more about us
+            </button>
+        </div>
+        <div class="about-bottom-image">
+            <div class="image-fade-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&w=1200&q=80"
+                alt="Studio Furniture Interior">
+        </div>
+    </section>
+    <section class="faq-section" id="faq-section">
+        <canvas id="sparkle-canvas-faq"></canvas>
+        <div class="faq-container">
+            <div class="faq-header">
+                <span class="faq-subtitle"><span class="line"></span> Faqs</span>
+                <h2 class="faq-title">Any Question?<br><span class="green-text">Look here.</span></h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What types of furniture do you offer?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a wide range of premium furniture including sofas, accent chairs, dining sets, and
+                            office furniture designed with a modern twist.</p>
+                    </div>
+                </div>
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        What payment methods do you accept?
+                        <span class="faq-icon"><i class="fas fa-minus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I track my furniture delivery?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, tracking is available for all orders. You will receive a tracking link via email once
+                            your order has been dispatched.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is your return policy?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept returns within 30 days of delivery, provided the item is in its original condition
+                            and packaging.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What materials are used in your furniture?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our furniture is crafted using sustainably sourced wood, high-density foam, and premium
+                            upholstery fabrics designed for durability.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are there any discounts or promotions available?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We occasionally run promotions. Sign up for our newsletter to stay informed about our latest
+                            flash sales and special offers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section" id="testimonial-section">
+        <canvas id="sparkle-canvas-testimonial"></canvas>
+        <div class="testimonial-bg-image"></div>
+        <div class="testimonial-overlay"></div>
+        <div class="testimonial-content">
+            <h2 class="testimonial-main-title">CLIENT<br>TESTIMONIAL</h2>
+            <div class="testimonial-contact-bar">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+123-456-7890</span>
+                </div>
+                <div class="contact-divider"></div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>www.studiofurniture.com</span>
+                </div>
+            </div>
+            <div class="testimonial-cards-container" id="testimonial-cards">
+            </div>
+            <div class="testimonial-controls">
+                <button class="testi-btn testi-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testi-dots" id="testi-dots">
+                </div>
+                <button class="testi-btn testi-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer" id="main-footer">
+        <canvas id="sparkle-canvas-footer"></canvas>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>Studio</h2>
+                    <p>Discover statement pieces engineered for the future of living. Transform your space with our
+                        premium designs.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h3>Shop</h3>
+                        <a href="#">Sofas</a>
+                        <a href="#">Chairs</a>
+                        <a href="#">Tables</a>
+                        <a href="#">Essentials</a>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Company</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Our Story</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <a href="#">FAQ</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                        <a href="#">Track Order</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Studio. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="video-modal" id="video-modal">
+        <div class="modal-inner">
+            <button class="close-modal" id="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <p>Video would play here</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
